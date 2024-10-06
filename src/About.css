@@ -1,0 +1,92 @@
+/* General styling for the about section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 50px;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+
+.section-title {
+    font-size: 2.5rem;
+    color: #fb8160;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-details {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.highlighted-text {
+    color: #fb8160;
+    font-weight: bold;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align skills */
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.skills-list li {
+    background-color: #fb8160;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: scale(1.05);
+    background-color: #61dafb;
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 30px 10px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .about-details {
+        font-size: 1rem;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+}

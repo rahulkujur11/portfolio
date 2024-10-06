@@ -1,0 +1,154 @@
+/* General styling for the experience section */
+.experience-section {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.experience-section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Fixed section title */
+.section-title {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    color: #61dafb;
+    z-index: 100;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Experience list with snap scrolling */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item {
+    height: 100vh; /* Full page height for each item */
+    scroll-snap-align: start;
+    background: linear-gradient(180deg, #282c34, #1e1e24); /* Background gradient */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    transform: translateY(20px);
+}
+
+.experience-item:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth fade-in effect */
+.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    /* transition: opacity 1s ease-in, transform 0.8s ease-in; */
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Company name and role styles */
+.company-name {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #fb8160;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.role {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+/* Date */
+.date {
+    font-size: 1rem;
+    color: #61dafb;
+    margin-bottom: 15px;
+}
+
+/* Description of tasks */
+.description {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.description li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+/* Technologies used */
+.technologies {
+    font-weight: bold;
+    background-color: #fb8160;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    color: #1e1e24;
+    margin-top: 10px;
+    text-shadow: none;
+}
+
+/* Scroll Icon Styling */
+.scroll-icon {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: #fb8160;
+    z-index: 100;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .experience-item {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .company-name {
+        font-size: 1.4rem;
+    }
+
+    .role {
+        font-size: 1.1rem;
+    }
+
+    .date {
+        font-size: 0.9rem;
+    }
+}

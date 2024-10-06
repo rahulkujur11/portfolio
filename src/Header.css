@@ -1,0 +1,156 @@
+/* General header styles */
+.App-header {
+    background-color: #282c34;
+    padding: 10px 40px; /* Add padding to both left and right sides */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Aligns logo to the left and links to the right */
+    align-items: center; /* Centers items vertically */
+    z-index: 1000;
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+  }
+  
+  /* Flexbox container for the navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Makes sure logo and links are spaced out */
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo styling */
+  .navbar-logo {
+    flex-grow: 1; /* Logo takes up space to push links to the right */
+  }
+  
+  .first-name {
+    color: #fb8160;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  .last-name {
+    color: #61dafb;
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+  }
+  
+  
+  .navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; /* Prevents wrapping of links */
+  }
+  
+  /* Styling the navbar links */
+  .navbar-links li a {
+    position: relative; /* Positioning for the underline effect */
+    color: #fb8160;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  /* Hover state for underline animation */
+  .navbar-links li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Position the underline slightly below the text */
+    left: 0;
+    background-color: #fb8160;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover state for underline */
+  .navbar-links li a:hover::before {
+    visibility: visible;
+    width: 100%; /* Full-width underline on hover */
+  }
+  
+  /* Active link styling */
+  .navbar-links li a.active {
+    color: #61dafb; /* Different color for the active section */
+  }
+  
+  /* No underline for active link */
+  .navbar-links li a.active::before {
+    visibility: hidden;
+    width: 100%;
+  }
+  
+  /* Hamburger Menu Styles */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .menu-bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fb8160;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-icon.open .menu-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-icon.open .menu-bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.open .menu-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: flex;
+    }
+  
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #282c34;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      padding: 20px;
+      border-radius: 0 0 8px 8px;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  }
+  
+  
+  /* Media query to make the navbar responsive on smaller screens */
+  @media (max-width: 768px) {
+    .App-header {
+      padding: 10px 20px; /* Reduce padding on smaller screens */
+    }
+  
+    .navbar-links {
+      gap: 15px; /* Reduce gap between links on smaller screens */
+      font-size: 16px; /* Optionally, reduce font size */
+    }
+  }
+  
+  
+  

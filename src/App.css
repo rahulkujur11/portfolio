@@ -1,0 +1,64 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.section {
+  height: 100vh; /* Each section fills the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; /* Snap sections to the top of the viewport */
+}
+
+.App {
+  text-align: left;
+  background: linear-gradient(180deg, #282c34, #1e1e24); /* Background gradient */
+  min-height: 100vh;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+}
+
+.App-body {
+  padding-top: 80px; /* Ensure the body starts below the header */
+}
+
+.full-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full window height */
+  text-align: center;
+  scroll-snap-align: start; /* Ensure the snap works on full window sections */
+}
+
+h1 {
+  color: #fb8160;
+  font-size: 72px; 
+}
+
+h3 {
+  color: #fff;
+}
+
+p {
+  color: #d1d1d1;
+}
+
+.project-card {
+  background-color: #3a3f47;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  width: 50%; /* Adjust as necessary */
+}
