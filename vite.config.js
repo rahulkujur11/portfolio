@@ -5,7 +5,7 @@ export default defineConfig(({ mode }) => {
   let basePath = '/'
   // Check if it's production
   if (mode === 'production') {
-    basePath = '/'; // Set your production base path here
+    basePath = '/portfolio/'; // Set your production base path here
   }
 
   // You can add more logic if needed for other environments like staging, testing, etc.
